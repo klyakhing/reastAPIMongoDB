@@ -17,11 +17,17 @@ repositories {
 }
 
 dependencies {
-	//implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	//implementation 'org.mongodb:mongodb-driver-sync:4.11.1'
+	implementation 'org.mongodb:mongodb-driver-sync:4.11.1'
+	// https://mvnrepository.com/artifact/org.mongodb/mongodb-driver-core
+	implementation group: 'org.mongodb', name: 'mongodb-driver-core', version: '4.11.1'
+	// https://mvnrepository.com/artifact/org.mongodb/bson
+	implementation group: 'org.mongodb', name: 'bson', version: '4.11.1'
+
+
 
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 

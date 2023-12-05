@@ -1,16 +1,18 @@
 package com.example.mongodb.model;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Date;
+import java.util.Objects;
 
 @Document(collection="inspections")
 public class Inspection {
 
-
+    @Id
     private String id;
 
-    private long certificate_number;
+    private Long certificate_number;
 
     private String business_name;
 
@@ -33,11 +35,11 @@ public class Inspection {
         this.id = id;
     }
 
-    public long getCertificate_number() {
+    public Long getCertificate_number() {
         return certificate_number;
     }
 
-    public void setCertificate_number(long certificate_number) {
+    public void setCertificate_number(Long certificate_number) {
         this.certificate_number = certificate_number;
     }
 
@@ -92,5 +94,18 @@ public class Inspection {
                 ", sector='" + sector + '\'' +
                 ", address=" + address +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Inspection that = (Inspection) o;
+        return id.equals(that.id) && Objects.equals(certificate_number, that.certificate_number) && Objects.equals(business_name, that.business_name) && Objects.equals(date, that.date) && Objects.equals(result, that.result) && Objects.equals(sector, that.sector) && Objects.equals(address, that.address);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, certificate_number, business_name, date, result, sector, address);
     }
 }

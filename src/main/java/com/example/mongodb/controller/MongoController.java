@@ -18,8 +18,6 @@ import com.example.mongodb.service.ExampleService;
 @RestController
 public class MongoController {
 
-    @Autowired
-    ExampleRepository exampleRepository;
 
     @Autowired
     private ExampleService exampleService;

@@ -1,6 +1,6 @@
 package com.example.mongodb.controller;
 
-import com.example.mongodb.model.Example;
+/***import com.example.mongodb.model.Example;
 import com.example.mongodb.model.Inspection;
 import com.example.mongodb.repository.ExampleRepository;
 import com.example.mongodb.repository.InspectionRepository;
@@ -23,12 +23,6 @@ public class MongoController {
     private ExampleService exampleService;
 
     @Autowired
-
-
-    /*@GetMapping(value = "/")
-    public void redirect(@NotNull HttpServletResponse response) throws IOException {
-        response.sendRedirect("/swagger-ui/index.html");
-    }*/
 
 
 
@@ -59,4 +53,4 @@ public class MongoController {
         this.exampleService.deleteExample(id);
         return HttpStatus.OK;
     }
-}
+}***/

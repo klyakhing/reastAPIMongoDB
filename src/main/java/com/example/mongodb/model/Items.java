@@ -1,16 +1,20 @@
 package com.example.mongodb.model;
 
+import org.bson.codecs.pojo.annotations.BsonProperty;
+
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Objects;
 
 public class Items {
 
     private String name;
-    private Double price;
-    private Integer quantity;
+    @BsonProperty(value = "price")
+    private BigDecimal price;
+    private int quantity;
     private List<String> tags;
 
-    public Items(String name, Double price, Integer quantity, List<String> tags) {
+    public Items(String name, BigDecimal price, int quantity, List<String> tags) {
         this.name = name;
         this.price = price;
         this.quantity = quantity;
@@ -28,19 +32,19 @@ public class Items {
         this.name = name;
     }
 
-    public Double getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 
-    public Integer getQuantity() {
+    public int getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(Integer quantity) {
+    public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
 

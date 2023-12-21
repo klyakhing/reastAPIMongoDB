@@ -1,4 +1,4 @@
-# reastAPIMongoDB
+# restAPIMongoDB
 Please use correct MongoDB connection\applications.properties:
 spring.data.mongodb.uri=mongodb+srv://login:password@cluster0.t7kjst8.mongodb.net/Cluster0/?retryWrites=true&w=majority
 

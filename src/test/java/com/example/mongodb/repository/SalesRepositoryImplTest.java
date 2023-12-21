@@ -123,7 +123,7 @@ class SalesRepositoryImplTest {
     void count() throws Exception{
 
         doReturn(10L).when(salesRepository).count();
-        
+
     }
 
 
